@@ -15,6 +15,7 @@ Se XP for maior ou igual a 10.001 = Radiante
 Ao final deve se exibir uma mensagem:
 "O Herói de nome {nome_heroi} está no nível de {nível_heróio}
 '''
+#R1
 
 nome_heroi = input('Qual o nome do seu personagem? ')
 nivel_heroi = int(input(f'Qual o nível atual de {nome_heroi}? '))
@@ -37,3 +38,81 @@ elif nivel_heroi >= 10001:
     elo = 'Radiante'
 
 print(f'O Herói de nome {nome_heroi} está no nível de {elo}')
+
+#-------------------------------------------------------------------
+
+#2
+'''
+Faça um algoritmo que leia os valores de A, B, C e em seguida 
+imprima na tela a soma entre A e B, e mostre se a soma é menor que C.
+'''
+#R2
+
+a = int(input('Qual o primeiro número? '))
+b = int(input('Qual o segundo número? '))
+c = int(input('Qual o terceiro número? '))
+
+if a+b < c:
+    print(f'A + B = {a+b}. Soma sendo menor que C.')
+else:
+    print(f'A + B = {a+b}.')
+
+#-------------------------------------------------------------------
+
+#3
+'''
+Faça um algoritmo para receber um número qualquer e imprimir na 
+tela se o número é par ou ímpar, positivo ou negativo.
+'''
+#R3
+
+x = int(input('Escreva um número: '))
+
+if x % 2 == 0 and x >= 0:
+    print('O número é par, e positivo')
+elif x % 2 == 0 and x < 0:
+    print('O número é par, e negativo')
+elif x % 2 != 0 and x >= 0:
+    print('O número é impar, e positivo')
+elif x % 2 != 0 and x < 0:
+    print('O número é impar, e negativo')
+
+#-------------------------------------------------------------------
+
+#4
+'''
+Faça um algoritmo que leia dois valores inteiros A e B, se os
+valores de A e B forem iguais, deverá somar os dois valores,
+caso contrário devera multiplicar A por B. Ao final de qualquer
+um dos cálculos deve-se atribuir o resultado a uma variável C e
+
+imprimir seu valor na tela.
+'''
+#R4
+
+a = int(input('Insira o valor de "A": '))
+b = int(input('Insira o valor de "B": '))
+
+if a == b:
+    c = a+b
+    print(f'C = {c}')
+else:
+    c = a*b
+    print(f'C = {c}')
+
+#-------------------------------------------------------------------
+
+#5
+'''
+Faça um algoritmo que leia o valor do salário mínimo e o valor do
+salário de um usuário, calcule quantos salários mínimos esse 
+usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
+'''
+#R5
+
+SalarioMinimo = 1293.20
+SalarioUsuario = float(input('Qual o valor do seu salário? '))
+
+x = int(SalarioUsuario / SalarioMinimo)
+
+print(f'O seu salário equivale a {x} vezes do salário mínimo')
