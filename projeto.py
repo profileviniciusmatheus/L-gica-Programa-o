@@ -116,3 +116,62 @@ SalarioUsuario = float(input('Qual o valor do seu salário? '))
 x = int(SalarioUsuario / SalarioMinimo)
 
 print(f'O seu salário equivale a {x} vezes do salário mínimo')
+
+#-------------------------------------------------------------------
+
+#6
+'''
+Objetivo:
+
+Crie uma classe generica que represente um herói de uma aventura e que possua as seguintes propriedades:
+
+- nome
+- idade
+- tipo (ex: guerreiro, mago, monge, ninja )
+
+além disso, deve ter um método chamado atacar que deve atender os seguientes requisitos:
+
+- exibir a mensagem: "o {tipo} atacou usando {ataque}")
+- aonde o {tipo} deve ser concatenando o tipo que está na propriedade da classe
+- e no {ataque} deve seguir uma descrição diferente conforme o tipo, seguindo a tabela abaixo:
+
+se mago -> no ataque exibir (usou magia)
+se guerreiro -> no ataque exibir (usou espada)
+se monge -> no ataque exibir (usou artes marciais)
+se ninja -> no ataque exibir (usou shuriken)
+
+## Saída
+
+Ao final deve se exibir uma mensagem:
+
+- "o {tipo} atacou usando {ataque}"
+  ex.1: mago atacou usando magia
+  ex.2: guerreiro atacou usando espada
+'''
+#R6
+
+class jogo():
+    def __init__(self, nome, idade, tipo):
+        self.nome = nome
+        self.idade = idade
+        self.tipo = tipo
+
+    def atacar(self):
+
+        lista_tipo = ['mago', 'guerreiro', 'monge', 'ninja']
+
+        if self.tipo == 'mago':
+            print(f'O {self.tipo} atacou usando magia')
+        elif self.tipo == 'guerreiro':
+            print(f'O {self.tipo} atacou usando espada')
+        elif self.tipo == 'monge':
+            print(f'O {self.tipo} atacou usando artes maciais')
+        elif self.tipo == 'ninja':
+            print(f'O {self.tipo} atacou usando shuriken')
+        else:
+            print(f'Selecione um tipo de personagem que esteja nesta lista: {lista_tipo}')
+
+
+vini = jogo('Vinicius', 24, 'oi')
+
+vini.atacar()
