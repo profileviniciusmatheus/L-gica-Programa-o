@@ -175,3 +175,40 @@ class jogo():
 vini = jogo('Vinicius', 24, 'oi')
 
 vini.atacar()
+
+#-------------------------------------------------------------------
+
+#7
+'''
+Crie uma função em python que calcule a média artimética de uma aluna que cursou a 
+disciplina de Programação I. A funcao deve receber como input as notas M1, M2 e M3 e 
+calcular a média. Após a média calculada, a funcao deve anunciar se a aluna foi aprovado, 
+reprovado ou pegou exame de acordo com a seguinte classificacao:
+
+Se a média estiver entre 0.0 e 4.0, o aluno está reprovado
+Se a média estiver entre 4.1 e 6.0, o aluno pegou exame
+Se a média for maior do que 6.0, o aluno está aprovado
+Se o aluno pegou exame, deve ser lida a nota do exame. 
+Se a nota do exame for maior do que 6.0, está aprovado, senão; está reprovado
+Nessa ultima parte não sei como fazer o input para que apareça a mensagem em caso da aluna 
+pegar exame.
+Do jeito que está, não aparece a mensagem do bloco.
+'''
+#R7
+
+x1 = float(input('Qual a sua primeira nota? '))
+x2 = float(input('Qual a sua segunda nota? '))
+x3 = float(input('Qual a sua terceira nota? '))
+
+def calculo_media(x, y, z):
+    media = (x + y + z) / 3
+    if media >= 0.0 and media <= 4.0:
+        print('Aluno Reprovado!')
+    elif media >= 4.1 and media <= 6.0:
+        print('Aluno Pegou exame!')
+        nota = float(input('Qual a sua nota do exame? '))
+        if nota >= 6.0: print('Aluno Aprovado!')
+        else: print('Aluno Reprovado!')
+    else: print('Aluno Aprovado!')
+
+calculo_media(x1,x2,x3)
